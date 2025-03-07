@@ -1,0 +1,781 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Century Gothic', sans-serif; /* Century Gothic comme police principale */
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #FFC0CB; /* Couleur de fond rose clair */
+    padding: 15px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Reste en haut lors du scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff80bf; /* Survol rose plus foncé */
+    transform: translateY(-3px); /* Légère élévation au survol */
+}
+
+/* Section Accueil */
+.section-accueil {
+    height: 100vh;
+    background: url('images/banner.jpeg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.section-accueil .intro h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #FFFFFF; /* Texte en rose clair */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Ombre sur le titre */
+}
+
+.section-accueil p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: white; /* Texte en blanc pour le paragraphe */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Ombre légère sur le texte */
+}
+
+.section-accueil .btn {
+    background-color: #FFC0CB;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.section-accueil .btn:hover {
+    background-color: #ff80bf;
+}
+
+/* Section À propos */
+.section-apropos {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.section-apropos h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.apropos-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+}
+
+.apropos-content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.apropos-content p {
+    font-size: 1.2em;
+    max-width: 600px;
+}
+
+/* Section Expériences */
+.section-experiences {
+    padding: 60px 0;
+    background-color: #fff0f6;
+}
+
+.section-experiences h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.experiences-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.experience {
+    width: 250px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.experience img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.experience p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background-color: #FFC0CB;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Section Hobbies */
+.section-hobbies {
+    background-color: #fff;
+    padding: 60px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-hobbies h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: normal; /* Pas de gras sur les titres */
+}
+
+.hobbies-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.hobby {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 22%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hobby img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.hobby p {
+    font-size: 18px;
+    color: #333;
+    font-weight: normal; /* Pas de gras sur les descriptions */
+}
+
+/* Section Parcours */
+.section-parcours {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.section-parcours h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 40px;
+}
+
+.timeline-event {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #FFC0CB; /* Couleur rose clair */
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #FFC0CB; /* Couleur rose clair */
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content {
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-left: 30px;
+}
+
+.timeline-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-event {
+        padding-left: 20px;
+    }
+
+    .timeline-content {
+        margin-left: 20px;
+    }
+
+    .section-apropos .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-accueil .intro h2 {
+        font-size: 2.5em;
+    }
+
+    .section-accueil p {
+        font-size: 1.2em;
+    }
+
+    .experiences-content,
+    .hobbies-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experience,
+    .hobby {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .section-hobbies h2 {
+        font-size: 28px;
+    }
+
+    .section-apropos h2 {
+        font-size: 2em;
+    }
+
+    form input,
+    form textarea {
+        width: 80%;
+    }
+}
+
+/* Section Contact */
+.section-contact {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.section-contact h2 {
+    font-size: 2.5em;
+    color: #9B7EDE; /* Violet clair */
+    margin-bottom: 20px;
+}
+
+.section-contact p {
+    font-size: 1.2em;
+    color: #6C3A5C; /* Rouge violacé */
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.linkedin a {
+    font-size: 1.2em;
+    color: #832161; /* Violet foncé */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.linkedin a:hover {
+    color: #9B7EDE;
+}
+
+.linkedin img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-details {
+    font-size: 1.1em;
+    color: #333;
+    text-align: left;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+}
+
+.qr-code img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-details {
+        text-align: center;
+    }
+
+    .qr-code img {
+        width: 120px;
+        height: 120px;
+    }
+}
+body {
+    font-family: 'Century Gothic', sans-serif; /* Century Gothic comme police principale */
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+/* Ajout d'un fond ou d'un espacement pour éviter les problèmes */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Section Accueil */
+.section-accueil {
+    padding: 80px 0;
+    background-image: url('images/banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+}
+
+.section-accueil h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.section-accueil p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 20px;
+    background-color: #0077b5;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #005f8c;
+}
+
+/* Section À propos */
+.section-apropos {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.apropos-content {
+    display: block; /* Utilisation du bloc pour garder les éléments sous forme de colonne */
+    text-align: center;
+    margin-top: 40px;
+}
+
+.apropos-content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.apropos-content p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cv-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #0077b5;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.cv-btn:hover {
+    background-color: #005f8c;
+}
+
+/* Container pour les sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Section Contact */
+.section-contact {
+    padding: 60px 20px;
+    background-color: #f1f1f1;
+}
+
+.contact-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+section {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}/* Bouton Mon CV */
+.cv-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #FFC0CB; /* Couleur rose */
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px; /* Espace au-dessus du bouton */
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.cv-btn:hover {
+    background-color: #FF99CC; /* Couleur du bouton au survol (rose clair) */
+}
+
+/* Section À propos - Centrer le contenu */
+.section-apropos {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    flex-direction: column;
+    gap: 20px; /* Espacement entre les éléments */
+    width: 100%; /* Assurer que la section prend toute la largeur de l'écran */
+    height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+}
+
+/* Bouton Mon CV */
+.cv-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #FFC0CB; /* Couleur rose */
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.cv-btn:hover {
+    background-color: #FF99CC; /* Couleur au survol */
+}
+/* Appliquer Century Gothic à toute la page */
+body {
+    font-family: 'Century Gothic', sans-serif;
+}
+
+/* Bouton Mon CV - Stylisation en rose */
+.cv-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #FFC0CB; /* Couleur rose */
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.cv-btn:hover {
+    background-color: #FF99CC; /* Couleur au survol */
+}
+
+/* Centrer le bouton Mon CV */
+.section-apropos .container {
+    text-align: center; /* Centre tout le contenu dans la section */
+}
+/* Section "Mes compétences" */
+.section-competences {
+    background-color: #f9c9d2;  /* Rose doux */
+    padding: 60px 20px;
+    font-family: 'Century Gothic', sans-serif;
+}
+
+.section-competences h2 {
+    text-align: center;
+    font-size: 3.5em;
+    margin-bottom: 50px;
+    color: #e91e63;  /* Rose moyen */
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.section-competences .competences-content {
+    display: flex;
+    flex-wrap: nowrap;  /* Pas de retour à la ligne */
+    justify-content: flex-start;  /* Départ des éléments à gauche */
+    gap: 30px;  /* Espacement entre les cartes */
+    overflow-x: auto;  /* Ajoute un défilement horizontal si nécessaire */
+    padding-bottom: 20px;  /* Un peu d'espace en bas */
+}
+
+.competence-card {
+    background-color: #fff;
+    padding: 30px;
+    width: 300px;  /* Largeur définie pour chaque carte */
+    border-radius: 10px;  /* bords arrondis */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    flex-shrink: 0;  /* Empêche de rétrécir */
+}
+
+.competence-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.competence-card h3 {
+    font-size: 1.8em;  /* Titre légèrement plus petit */
+    color: #d81b60;  /* Rose foncé */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.competence-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.competence-card ul li {
+    font-size: 1.0em;  /* Taille réduite du texte */
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.competence-card ul li i {
+    color: #e91e63;
+    margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-competences h2 {
+        font-size: 2.5em;
+    }
+
+    .competence-card {
+        width: 48%;  /* Deux cartes par ligne sur les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    .competence-card {
+        width: 100%;  /* Une carte par ligne sur les très petits écrans */
+    }
+}
+/* Section "Mes compétences" */
+.section-competences {
+    background-color: #f9c9d2;  /* Rose doux */
+    padding: 60px 20px;
+    font-family: 'Century Gothic', sans-serif;
+}
+
+.section-competences h2 {
+    text-align: center;
+    font-size: 3.5em;
+    margin-bottom: 50px;
+    color: #e91e63;  /* Rose moyen */
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.section-competences .competences-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.competence-card {
+    background-color: #fff;
+    padding: 30px;
+    width: 270px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.competence-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.competence-card h3 {
+    font-size: 1.5em;
+    color: #d81b60;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.competence-icon {
+    width: 40px; /* Taille de l'icône */
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.competence-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.competence-card ul li {
+    font-size: 1.0em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.competence-card ul li i {
+    color: #e91e63;
+    margin-right: 10px;
+}
